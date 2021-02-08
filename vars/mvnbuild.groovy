@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-def call(String name = 'maven') {
+def call(String name) {
 				echo 'maven clean'
-				bat ' mvn -f pom.xml clean install' 
+	bat ' mvn -f ${name}/pom.xml clean install' 
 }
