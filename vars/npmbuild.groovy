@@ -2,5 +2,5 @@
 
 def call(String name = 'nodejs') {
 				echo 'npm install'
-				bat ' npm install' 
+				bat 'npm install' 
 }
