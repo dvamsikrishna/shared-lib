@@ -2,6 +2,6 @@
 
 def call(String reponame, String branch) {
 dir ('git_url'){
-				git( url: "${reponame}", credentialsid: 'gitaccess', branch: "${branch}") 
+				git( url: "${reponame}", branch: "${branch}") 
         }
 }
