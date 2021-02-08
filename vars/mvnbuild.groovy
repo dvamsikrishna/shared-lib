@@ -2,5 +2,5 @@
 
 def call(String name) {
 				echo 'maven clean'
-	bat "mvn -f ${name}/pom.xml deploy"
+	bat "mvn -f ${name}/pom.xml clean install"
 }
