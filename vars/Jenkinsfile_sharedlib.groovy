@@ -1,12 +1,20 @@
 def call(String mavenversion, String jdkversion) {
 echo 'Calling Jenkins file'
 pipeline {
-    agent any    
+    agent any
     tools {
         maven "${mavenversion}"
-        jdk "jdk11"
+        jdk "${jdkversion}"
     }
     stages {
+        stage('Gitclone-mvn-branch') {
+            steps {
+                echo "calling gitclone.groovy function for clone the gir reposiroty"
+                gitclone ("https://github.com/dvamsikrishna/Sample-development.git","maven-shared-lib")
+               
+            }
+            
+}
         stage('Maven-Build') {
             steps {
                 echo "calling the mvnbuild.groovy function for mvn build"
@@ -14,7 +22,7 @@ pipeline {
             }
             
         }
-        stage('Gitclone') {
+        stage('Gitclone-npm branch') {
             steps {
                 echo "calling gitclone.groovy function for clone the gir reposiroty"
                 gitclone ("https://github.com/dvamsikrishna/Sample-development.git","npm-shared-lib")
