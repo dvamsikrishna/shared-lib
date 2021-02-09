@@ -6,7 +6,7 @@ pipeline {
     agent any
     tools {
         maven "${mavenversion}"
-        jdk 'jdkversion'
+        jdk "${jdkversion}"
     }
     stages {
         stage('Maven-Build') {
