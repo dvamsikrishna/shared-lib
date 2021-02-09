@@ -1,5 +1,7 @@
 def call(String mavenversion, String jdkversion) {
 echo 'Calling Jenkins file'
+pipeline {
+    agent any    
     tools {
         maven "${mavenversion}"
         jdk "${jdkversion}"
@@ -32,6 +34,7 @@ echo 'Calling Jenkins file'
                 echo "calling email.groovy shared library function for sending an email"
                  email()
             }
+}
 }
 }
 }
