@@ -10,7 +10,7 @@ pipeline {
         stage('Maven-Build') {
             steps {
                 echo "calling the mvnbuild.groovy function for mvn build"
-                mvnbuild "mavenbuild"
+                mvnbuild "git_url"
             }
             
         }
@@ -25,7 +25,7 @@ pipeline {
     stage('NPM-Build') {
             steps {
                 echo "calling npmbuild.groovy function for npm build"
-                npmbuild("gitclone")
+                npmbuild("git_url")
             }
 
 }
