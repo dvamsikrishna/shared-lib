@@ -4,7 +4,7 @@ pipeline {
     agent any    
     tools {
         maven "${mavenversion}"
-        jdk "jdk9"
+        jdk "jdk11"
     }
     stages {
         stage('Maven-Build') {
