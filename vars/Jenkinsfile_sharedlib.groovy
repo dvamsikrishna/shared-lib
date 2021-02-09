@@ -1,4 +1,3 @@
-  
 #!/usr/bin/env groovy
 
 def call(String mavenversion, String jdkversion) {
