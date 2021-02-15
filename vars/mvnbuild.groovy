@@ -3,6 +3,6 @@
 def call(String name) {
 node('master') {
 				echo 'maven clean'
-	bat "mvn -f ${name}/pom.xml clean install"
+	bat "mvn -f pom.xml clean install"
 }
 }
