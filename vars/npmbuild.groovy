@@ -2,5 +2,6 @@
 
 def call(String name) {
 				echo 'npm install'
-				bat ' cd ${WORKSPACE}/${name}; npm install' 
+	bat 'cd ${WORKSPACE}/${name}'
+				bat 'npm install' 
 }
