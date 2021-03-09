@@ -4,7 +4,7 @@ def call(String name) {
 node('master') {
 				echo 'maven clean'
 	bat """
-	cd "C:\\Program Files (x86)\\Jenkins\\workspace\\Shared-lib-Pipeline\\git_url"
+	cd "${WORKSPACE}\\git_url"
 	mvn clean install
 	"""
 }
